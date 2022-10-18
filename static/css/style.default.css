@@ -88,10 +88,6 @@ button {
 p.lead {
   margin-bottom: 40px;
 }
-section,
-div.section {
-  margin-bottom: 40px;
-}
 .no-mb {
   margin-bottom: 0 !important;
 }
@@ -1833,7 +1829,7 @@ fieldset[disabled] .btn-template-primary.active {
   color: #555555;
   text-transform: uppercase;
   margin-bottom: 0;
-  text-align: left;
+  text-align: justify;
   font-size: 14px;
   letter-spacing: 0.08em;
 }
@@ -1841,7 +1837,7 @@ fieldset[disabled] .btn-template-primary.active {
   color: #999999;
   padding: 10px 0;
   margin-bottom: 20px;
-  text-align: left;
+  text-align: justify;
 }
 .portfolio-showcase {
   margin: 15px 0 60px;
@@ -2034,7 +2030,7 @@ fieldset[disabled] .btn-template-primary.active {
 }
 #blog-listing-big .post .intro,
 #blog-homepage .post .intro {
-  text-align: left;
+  text-align: justify;
 }
 #blog-listing-big .post .image,
 #blog-homepage .post .image {
@@ -2060,9 +2056,6 @@ fieldset[disabled] .btn-template-primary.active {
 #blog-listing-big .post .read-more,
 #blog-homepage .post .read-more {
   text-align: right;
-}
-#blog-listing-medium .post {
-  margin-bottom: 60px;
 }
 #blog-listing-medium .post h2 {
   text-transform: uppercase;
@@ -2104,7 +2097,7 @@ fieldset[disabled] .btn-template-primary.active {
   }
 }
 #blog-listing-medium .post .intro {
-  text-align: left;
+  text-align: justify;
 }
 #blog-listing-medium .post .clearfix:before,
 #blog-listing-medium .post .clearfix:after,
@@ -2165,7 +2158,7 @@ fieldset[disabled] .btn-template-primary.active {
   font-weight: 500;
 }
 .box-image-text.blog .intro {
-  text-align: left;
+  text-align: justify;
   margin-bottom: 20px;
 }
 #blog-homepage .post {
