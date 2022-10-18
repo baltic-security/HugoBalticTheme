@@ -1,17 +1,20 @@
-name = "Universal"
+name = "HugoBalticTheme"
 license = "MIT"
-licenselink = "https://github.com/devcows/hugo-universal-theme/blob/master/LICENSE"
-description = "A port of the Universal theme"
-homepage = "https://github.com/devcows/hugo-universal-theme"
-tags = ["blog", "company", "portfolio", "projects", "minimal", "responsive"]
-features = ["blog", "themes", "disqus", "minimal", "responsive"]
+licenselink = "https://github.com/baltic-security/HugoBalticTheme/blob/master/LICENSE"
+description = "A fork of the devcows Hugo Universal Theme"
+homepage = "https://github.com/baltic-security/HugoBalticTheme"
+#tags = ["blog", "company", "portfolio", "projects", "minimal", "responsive"]
+#features = ["blog", "themes", "disqus", "minimal", "responsive"]
 min_version = 0.15
 
 [author]
-    name = "devcows"
-    homepage = "https://github.com/devcows"
+    name = "BFS"
+    homepage = "https://github.com/baltic-security"
 
 # If Porting existing theme
+[original]
+    author = "devcows"
+    homepage = "https://github.com/devcows"
 [original]
     author =  "bootstrapious"
     homepage = "http://bootstrapious.com/p/universal-business-e-commerce-template"
