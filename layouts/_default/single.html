@@ -12,7 +12,28 @@
             <div class="container">
                 <div class="row">
                   {{ if .Params.cinematic }}
-
+                    <div class="col-md-12" id="blog-post">
+                      {{ if or .Params.author .Params.date }}
+                        <p class="text-muted text-uppercase mb-small text-right">
+                          {{ if isset .Params "authors" }}
+                            {{ i18n "authorBy" }} {{ range $index, $author := .Params.authors }}{{ if $index }}, {{ end }}<a href="{{ (printf "%s/%s" ("authors" | relLangURL) ($author | urlize)) }}">{{ $author }}</a>{{ end }}
+                          {{ end }}
+                          {{ if and .Params.author .Params.date }}
+                            |
+                          {{ end }}
+                          {{ if .Params.date }}
+                            {{ $createdAt := .Date.Format .Site.Params.date_format }}
+                            {{ range $index, $month := slice "January" "February" "March" "April" "May" "June" "July" "August" "September" "October" "November" "December" }}
+                                {{ $createdAt = replace $createdAt $month (i18n $month) }}
+                            {{ end }}
+                            {{ $createdAt }}
+                          {{ end }}
+                        </p>
+                      {{ end }}
+                      <div id="post-content">
+                        {{ .Content }}
+                      </div>
+                    </div>
                   {{ else }}
                     <!-- *** LEFT COLUMN *** -->
                     <div class="col-md-9" id="blog-post">
@@ -39,13 +60,7 @@
                   </div>
                   <!-- *** RIGHT COLUMN *** -->
                   <div class="col-md-3">
-
-                      <!-- *** MENUS AND WIDGETS *** -->
-
-                      {{ partial "sidebar.html" . }}
-
-                      <!-- *** MENUS AND FILTERS END *** -->
-
+                    {{ partial "sidebar.html" . }}
                   </div>
                   {{ end }}
                 </div>
