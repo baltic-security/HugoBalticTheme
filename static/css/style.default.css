@@ -317,7 +317,6 @@ ul.list-style-none {
   letter-spacing: 2px;
   border-top: solid 5px transparent;
 }
-
 .navbar ul.nav > li > a:hover {
   border-top: solid 5px var(--primary-accent);
 }
@@ -2180,6 +2179,12 @@ fieldset[disabled] .btn-template-primary.active {
 #blog-post #post-content {
   margin-bottom: 20px;
 }
+
+#post-content p{
+  text-align: justify;
+  text-indent: 2rem;
+}
+
 #blog-post #post-content img{
   max-width: 100%;
   height: auto;
@@ -2835,6 +2840,7 @@ fieldset[disabled] .btn-template-primary.active {
 @media (min-width: 768px) {
   .navbar-header {
     float: left;
+    
   }
 }
 .navbar-collapse {
@@ -2933,6 +2939,9 @@ fieldset[disabled] .btn-template-primary.active {
   font-size: 18px;
   line-height: 20px;
   height: 62px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 .navbar-brand:hover,
 .navbar-brand:focus {
