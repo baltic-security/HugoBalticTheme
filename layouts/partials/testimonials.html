@@ -2,7 +2,25 @@
 {{ if .Site.Params.testimonials.enable }}
 {{ if isset .Site.Data "testimonials" }}
 {{ if gt (len .Site.Data.testimonials) 0 }}
-<section class="bar background-pentagon no-mb">
+<!--<div class="container">
+    <div class="row justify-content-center pb-5">
+        {{ range .Site.Data.testimonials }}
+        <div class="card2 col-md-3 mt-100">
+            <div class="card-content2">
+                <div class="card-body p-0">
+                    <div class="profile2"> <img class="" alt="" src="{{ .avatar | absURL }}"> </div>
+                    <div class="card-title mt-4"> Angelina Frederic<br /> <small>Head of marketing at K mart</small> </div>
+                    <div class="text">
+                        <p>{{ .text | markdownify }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</div>-->
+
+<!--<section class="bar background-pentagon no-mb">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -13,8 +31,6 @@
                 <p class="lead">
                   {{ .Site.Params.testimonials.subtitle | markdownify }}
                 </p>
-
-                <!-- *** TESTIMONIALS CAROUSEL *** -->
 
                 <ul class="owl-carousel testimonials same-height-row"
                     data-items="{{ default 4 .Site.Params.CarouselTestimonials.items }}"
@@ -40,15 +56,11 @@
                     </li>
                     {{ end }}
                 </ul>
-                <!-- /.owl-carousel -->
-
-                <!-- *** TESTIMONIALS CAROUSEL END *** -->
             </div>
 
         </div>
     </div>
-</section>
-<!-- /.bar -->
+</section>-->
 {{ end }}
 {{ end }}
 {{ end }}
