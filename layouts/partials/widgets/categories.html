@@ -6,12 +6,20 @@
         <h3 class="panel-title">{{ i18n "categoriesTitle" }}</h3>
     </div>
     <div class="panel-body">
-        <ul class="nav nav-pills nav-stacked">
+        <!--<ul class="nav nav-pills nav-stacked">
             {{ $current := . }}
             {{ range $name, $items := .Site.Taxonomies.categories }}
             <li{{ if eq $current.RelPermalink ($name | urlize | lower | printf "/categories/%s/") }} class="active"{{ end }}>
                 <a href="{{ "categories/" | relLangURL }}{{ $name | urlize | lower }}">{{ $name | upper }}</a>
             </li>
+            {{ end }}
+        </ul>-->
+        <ul class="tag-cloud">
+            {{ $current := . }}
+            {{ range $name, $items := .Site.Taxonomies.categories }}
+              <li {{ if eq $current.RelPermalink (printf "%s/%s/" ("tags" | relLangURL) ($name | urlize | lower)) }}class="active"{{ end }}>
+                <a href="{{ "tags/" | relLangURL }}{{ $name | urlize | lower }}">{{ $name }}</a>
+              </li>
             {{ end }}
         </ul>
     </div>
